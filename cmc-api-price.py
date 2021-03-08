@@ -20,7 +20,6 @@ parameters = {
 headers = {
     "Accepts": "application/json",
     "X-CMC_PRO_API_KEY": "00262ed9-c562-4378-b9e6-efeff1b62b97",
-    "name":"Ethereum"
 }
 # Call the API endpoint and pass parameters and header information
 
@@ -37,6 +36,20 @@ QUESTION: on https://coinmarketcap.com/api/documentation/v1/#operation/getV1Cryp
 What does sort against ... mean?
 What is the difference between that and the parameter- why can't I put that the sort against, specifically "symbol" in the parameter?
 
-
+"""
 
 """
+Update.. Maybe I have the wrong url calling... I looked at the other calls and turns out there is Quotes/Latest and that has id in the paramters.. omg if this works..
+Creating a new file called quotes-cmc.py
+
+WOW... quotes-cmc.py works. I SPENT SO MUCH TIME TRYING TO FIGURE OUT THE ID PART IN THE PARAMETER..
+
+Lesson learned:
+- Reading documentation and knowing what to find before carelessly attempting to understand why something doesn't work.
+    My keyword was "ID", but that wasn't in the https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+    so then I kept scrolling in the docs and found "id" in https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest
+"""
+
+"""
+Next steps:
+- 

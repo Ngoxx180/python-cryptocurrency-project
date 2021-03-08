@@ -2,7 +2,7 @@ import requests
 
 # https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide
 #https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyOhlcvHistorical
-# Latest lists of all coins from coinmarketcap api key 
+# Latest lists of all coins from coinmarketcap api key
 
 cmc_listings_url = (
     "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"

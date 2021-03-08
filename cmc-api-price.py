@@ -1,14 +1,15 @@
 import requests
 
 # https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide
-# Latest lists of all coins from coinmarketcap sandbox instance
+#https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyOhlcvHistorical
+# Latest lists of all coins from coinmarketcap api key 
 
 cmc_listings_url = (
     "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest"
 )
 # Limit the data returned to first 20 cryptocurrencies using query parameters
 
-parameters = {"start": "1", "limit": "20", "convert": "USD"}
+parameters = {"start": "1", "limit": "10", "convert": "USD"}
 # Pass the required API key
 
 headers = {

@@ -1,11 +1,5 @@
-import os
-from os.path import join, dirname
-from dotenv import load_dotenv
+from decouple import config
 
-dotenv_path = join(dirname(__file__),'.env')
-
-load_dotenv(dotenv_path)
-
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY", default="No Key Found", cast=str )
 
 print("my secret is:" + SECRET_KEY)

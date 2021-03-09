@@ -12,7 +12,8 @@ parameters = {
     "limit": "1",
     "convert": "USD",
     "sort": "market_cap_by_total_supply_strict",
-    "sort": "market_cap_strict"
+    "sort": "market_cap_strict",
+    "sort": "price"
     #"id":"3945" #ID doesn't work here, bc not part of paramters in docs. Maybe try in header?
 }
 # Pass the required API key
@@ -52,4 +53,5 @@ Lesson learned:
 
 """
 Next steps:
-- 
+-
+"""

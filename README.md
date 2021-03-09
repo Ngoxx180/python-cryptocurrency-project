@@ -1,8 +1,14 @@
-# python-cryptocurrency-project
-Learning python through making projects about cryptocurrency
+# Introduction
 
-For cg-price.py to work:
-  In Python3 interpreter: 
-  - pip install pycoingecko
-  - python cg-price.py
-  - type coin you want to view
+## About
+Learning python through making projects about cryptocurrency.
+
+
+
+## Prerequisites to using cg-price.py
+
+### Install
+  > pip install pycoingecko
+### Usage
+  > from pycoingecko import CoinGeckoAPI
+  > cg = CoinGeckoAPI()

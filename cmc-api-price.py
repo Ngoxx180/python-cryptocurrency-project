@@ -18,7 +18,8 @@ parameters = {
 
 headers = {
     "Accepts": "application/json",
-    "X-CMC_PRO_API_KEY": "00262ed9-c562-4378-b9e6-efeff1b62b97",
+    #"X-CMC_PRO_API_KEY": "00262ed9-c562-4378-b9e6-efeff1b62b97",
+    "X-CMC_PRO_API_KEY": "SECRET_KEY"
 }
 
 response = requests.get(cmc_listings_url, headers=headers, params=parameters)

@@ -1,11 +1,11 @@
-#This script utilizes CoinGecko's API calling 
+#This script utilizes CoinGecko's API calling
 from pycoingecko import CoinGeckoAPI
 
 cg = CoinGeckoAPI()
 
 while True:
     print('-----------------------------------------')
-    print('\nWhat coin would you like to see? \nTo exit: "stop"\n')
+    print('\nWhat coin would you like to see? \nTo exit: "exit"\n')
     print('-----------------------------------------')
 
     coin = input()

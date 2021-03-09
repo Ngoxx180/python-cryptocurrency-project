@@ -1,3 +1,4 @@
+# Coinmarketcap- This script utilizes the /quotes/latest to returns the latest market quote for 1 or more cryptocurrencies
 import requests
 
 # https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide
@@ -9,8 +10,8 @@ cmc_listings_url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/l
 
 parameters = {
     "id": "3945"
-    #"id": "2" #this didn't work.. it showed LTC?
-    #QUESTION: How to view multiple coins? 
+    # "id": "2" #this didn't work.. it showed LTC?
+    # QUESTION: How to view multiple coins?
 }
 
 headers = {
@@ -21,5 +22,5 @@ headers = {
 response = requests.get(cmc_listings_url, headers=headers, params=parameters)
 # Convert the json payload to a python data type
 
-#Need to print .json() bc response doesn't have a get method. Need to use json to get actual data
+# Need to print .json() bc response doesn't have a get method. Need to use json to get actual data
 print(response.json())

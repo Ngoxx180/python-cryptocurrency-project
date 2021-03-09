@@ -1,3 +1,4 @@
+#This script utilizes CoinGecko's API calling 
 from pycoingecko import CoinGeckoAPI
 
 cg = CoinGeckoAPI()

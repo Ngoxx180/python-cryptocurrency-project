@@ -1,6 +1,8 @@
+#Python-decouple env var example
+
 from decouple import config
 
-SECRET_KEY = config("SECRET_KEY", default="No Key Found", cast=str )
+SECRET_KEY = config("API_KEY", default="No Key Found", cast=str )
 
 print("my secret is:" + SECRET_KEY)
 

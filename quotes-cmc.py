@@ -1,5 +1,9 @@
 # Coinmarketcap- This script utilizes the /quotes/latest to returns the latest market quote for 1 or more cryptocurrencies
 import requests
+#for api
+
+import json
+#for jq module
 
 from decouple import config
 #https://pypi.org/project/python-decouple/#why-not-just-use-environment-variables
@@ -16,7 +20,8 @@ SECRET_KEY = config("API_KEY", default="No Key Found", cast=str )
 
 
 parameters = {
-    "id": "3945"
+    "id": "3945",
+    "slug" : "ethereum,harmony,bitcoin,0x"
     # "id": "2" #this didn't work.. it showed LTC?
     # QUESTION: How to view multiple coins?
 }
@@ -29,5 +34,8 @@ headers = {
 response = requests.get(cmc_listings_url, headers=headers, params=parameters)
 # Convert the json payload to a python data type
 
-print(response.json())
+print(json.dumps((response.json())))
 # Need to print .json() bc response doesn't have a get method. Need to use json to get actual data
+
+# To print jq python [app] | jq .
+# To use jq print(json.dumps(thingy)) to

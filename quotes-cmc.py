@@ -20,10 +20,8 @@ SECRET_KEY = config("API_KEY", default="No Key Found", cast=str )
 
 
 parameters = {
-    "id": "3945",
-    "slug" : "ethereum,harmony,bitcoin,0x"
-    # "id": "2" #this didn't work.. it showed LTC?
-    # QUESTION: How to view multiple coins?
+    #"id": 3945,
+    "slug" : "ethereum,harmony,bitcoin"
 }
 
 headers = {
@@ -39,3 +37,14 @@ print(json.dumps((response.json())))
 
 # To print jq python [app] | jq .
 # To use jq print(json.dumps(thingy)) to
+
+
+"""
+++++++++++++++++++++++++++
+QUESTION: How to view multiple coins?
+    Answer: instead of using the "id" paramter (for a single cryptocurrency),
+            use slug (Alternatively pass a comma-separated list of cryptocurrency slugs.
+                     [Example: "bitcoin,ethereum"])
+
+)
+"""

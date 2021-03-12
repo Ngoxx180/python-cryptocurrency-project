@@ -1,6 +1,9 @@
 #This script utilizes CoinGecko's API calling
 from pycoingecko import CoinGeckoAPI
 
+from prometheus_client import start_http_server, Summary
+import time
+
 cg = CoinGeckoAPI()
 
 while True:

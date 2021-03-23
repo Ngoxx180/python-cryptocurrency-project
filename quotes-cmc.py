@@ -1,20 +1,19 @@
 # Coinmarketcap- This script utilizes the /quotes/latest to returns the latest market quote for 1 or more cryptocurrencies
 import requests
-
 # for api
 
 import json
-
 # for jq module
+# To show jq output -> python <python-file.py> | jq .
+import logging
+import time
+from datetime import datetime, timedelta
+from prometheus_client import start_http_server, Guage, Counter, Enum
 
 from decouple import config
-
-# https://pypi.org/project/python-decouple/#why-not-just-use-environment-variables
 # for env vars
+# https://pypi.org/project/python-decouple/#why-not-just-use-environment-variables
 
-# https://coinmarketcap.com/api/documentation/v1/#section/Quick-Start-Guide
-# https://coinmarketcap.com/api/documentation/v1/#operation/getV2CryptocurrencyOhlcvHistorical
-# Latest lists of all coins from coinmarketcap api key
 
 cmc_listings_url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest"
 # Limit the data returned to first 20 cryptocurrencies using query parameters
